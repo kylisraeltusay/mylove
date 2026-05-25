@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Greeting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="site-shell">
+
+    <!-- Password Page -->
+    <section class="page page-password active" data-page="password">
+      <div class="page-inner split-layout">
+
+        <div class="frame-panel card">
+          <span class="floating-decor floating-heart" aria-hidden="true">&hearts;</span>
+          <span class="floating-decor floating-star" aria-hidden="true">&hearts;</span>
+
+          <div class="photo-frame">
+            <div class="frame-bow" aria-hidden="true"></div>
+            <img id="passwordPhoto" src="assets/photo1.png" alt="Birthday photo placeholder">
+          </div>
+
+          <img
+            class="bubu-dudu-img"
+            src="assets/bubu-dudu.png"
+            alt="Bubu and Dudu decoration"
+          >
+
+          
+          <div class="mini-scene">
+            <p class="mini-note">May we always grow together.</p>
+          </div>
+
+          <audio id="typeSound" src="assets/type.mp3" preload="auto"></audio>
+          <audio id="bgMusic" src="assets/mylove.mp3" loop preload="auto"></audio>
+        </div>
+
+        <div class="keypad-panel card">
+          <p class="eyebrow">Secret Birthday Lock</p>
+          <h1>Enter a passcode</h1>
+
+          <div
+            class="passcode-display"
+            id="passcodeDisplay"
+            aria-label="Passcode boxes"
+          ></div>
+
+          <div class="keypad" id="keypad">
+            <button type="button" class="keypad-btn" data-value="1">1</button>
+            <button type="button" class="keypad-btn" data-value="2">2</button>
+            <button type="button" class="keypad-btn" data-value="3">3</button>
+            <button type="button" class="keypad-btn" data-value="4">4</button>
+            <button type="button" class="keypad-btn" data-value="5">5</button>
+            <button type="button" class="keypad-btn" data-value="6">6</button>
+            <button type="button" class="keypad-btn" data-value="7">7</button>
+            <button type="button" class="keypad-btn" data-value="8">8</button>
+            <button type="button" class="keypad-btn" data-value="9">9</button>
+            <button type="button" class="keypad-btn" data-value="*">*</button>
+            <button type="button" class="keypad-btn" data-value="0">0</button>
+            <button type="button" class="keypad-btn" data-value="#">#</button>
+          </div>
+
+          <p class="hint-text">hint: our special code</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Birthday Intro Page -->
+    <section class="page page-intro" data-page="intro">
+      <div class="page-inner centered-layout">
+
+        <div class="card intro-card">
+
+          <div class="intro-floating-effects" aria-hidden="true">
+            <span class="floating-heart-intro heart-a">♥</span>
+            <span class="floating-heart-intro heart-b">♥</span>
+            <span class="floating-heart-intro heart-c">♥</span>
+            <span class="floating-heart-intro heart-d">♥</span>
+
+            <span class="diamond-shine shine-a"><span></span></span>
+            <span class="diamond-shine shine-b"><span></span></span>
+            <span class="diamond-shine shine-c"><span></span></span>
+            <span class="diamond-shine shine-d"><span></span></span>
+          </div>
+
+          <div class="intro-title-wrap">
+            <svg
+              class="intro-title-svg"
+              viewBox="0 0 1000 170"
+              preserveAspectRatio="xMidYMid meet"
+              aria-label="Unlocked With Love. Happy Birthday Palangga!"
+            >
+              <defs>
+                <path id="smallArcPath" d="M 330 58 Q 500 30 670 58"></path>
+                <path id="mainArcPath" d="M 150 128 Q 500 55 850 128"></path>
+              </defs>
+
+              <text class="svg-arc-small">
+                <textPath href="#smallArcPath" startOffset="50%" text-anchor="middle">
+                  UNLOCKED WITH LOVE
+                </textPath>
+              </text>
+
+              <text class="svg-arc-main">
+                <textPath href="#mainArcPath" startOffset="50%" text-anchor="middle">
+                  Happy Birthday Palangga!
+                </textPath>
+              </text>
+            </svg>
+          </div>
+
+          <div class="celebration-scene gif-scene">
+            <img
+              class="dudu-flower-gif"
+              src="assets/dudu and bubu.png"
+              alt="Dudu greeting with flowers"
+            >
+          </div>
+
+          <div class="page-actions center-actions">
+            <button type="button" class="cute-button" data-next="gift">NEXT</button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Gift Page -->
+    <section class="page page-gift" data-page="gift">
+      <div class="page-inner centered-layout">
+
+        <div class="card wide-card gift-card">
+
+          <div class="gift-floating-effects" aria-hidden="true">
+            <span class="diamond-shine gift-shine-a"><span></span></span>
+            <span class="diamond-shine gift-shine-b"><span></span></span>
+            <span class="diamond-shine gift-shine-c"><span></span></span>
+            <span class="diamond-shine gift-shine-d"><span></span></span>
+
+            <span class="floating-heart-intro gift-heart-a">♥</span>
+            <span class="floating-heart-intro gift-heart-b">♥</span>
+          </div>
+
+          <p class="eyebrow">These are my</p>
+          <h2>Gifts for you</h2>
+          <p class="section-text">Open one at a time my lovee.</p>
+
+          <div class="gift-row">
+
+            <button type="button" class="gift-item" data-gift-index="0" aria-label="Open gift one">
+              <span class="gift-bow gift-bow-left"></span>
+              <span class="gift-bow gift-bow-right"></span>
+              <span class="gift-knot"></span>
+              <span class="gift-lid"></span>
+              <span class="gift-box-base"></span>
+              <span class="gift-ribbon vertical"></span>
+              <span class="gift-ribbon horizontal"></span>
+              <span class="gift-sparkle sparkle-1" aria-hidden="true">&hearts;</span>
+              <span class="gift-sparkle sparkle-2" aria-hidden="true">&#9733;</span>
+              <span class="gift-sparkle sparkle-3" aria-hidden="true">&#10024;</span>
+              <span class="gift-message"></span>
+            </button>
+
+            <button type="button" class="gift-item" data-gift-index="1" aria-label="Open gift two">
+              <span class="gift-bow gift-bow-left"></span>
+              <span class="gift-bow gift-bow-right"></span>
+              <span class="gift-knot"></span>
+              <span class="gift-lid"></span>
+              <span class="gift-box-base"></span>
+              <span class="gift-ribbon vertical"></span>
+              <span class="gift-ribbon horizontal"></span>
+              <span class="gift-sparkle sparkle-1" aria-hidden="true">&hearts;</span>
+              <span class="gift-sparkle sparkle-2" aria-hidden="true">&#9733;</span>
+              <span class="gift-sparkle sparkle-3" aria-hidden="true">&#10024;</span>
+              <span class="gift-message"></span>
+            </button>
+
+            <button type="button" class="gift-item" data-gift-index="2" aria-label="Open gift three">
+              <span class="gift-bow gift-bow-left"></span>
+              <span class="gift-bow gift-bow-right"></span>
+              <span class="gift-knot"></span>
+              <span class="gift-lid"></span>
+              <span class="gift-box-base"></span>
+              <span class="gift-ribbon vertical"></span>
+              <span class="gift-ribbon horizontal"></span>
+              <span class="gift-sparkle sparkle-1" aria-hidden="true">&hearts;</span>
+              <span class="gift-sparkle sparkle-2" aria-hidden="true">&#9733;</span>
+              <span class="gift-sparkle sparkle-3" aria-hidden="true">&#10024;</span>
+              <span class="gift-message"></span>
+            </button>
+
+          </div>
+
+          <div class="page-actions center-actions">
+            <button
+              type="button"
+              class="cute-button hidden"
+              id="giftNextButton"
+              data-next="cake"
+            >
+              NEXT
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+<!-- Gift Result 1 -->
+<section class="page page-gift-result" data-page="gift-result-0">
+  <div class="page-inner centered-layout">
+    <div class="card gift-result-card gift-result-beauty">
+
+      <div class="gift-result-effects" aria-hidden="true">
+        <span class="floating-heart-intro result-heart-a">♥</span>
+        <span class="floating-heart-intro result-heart-b">♥</span>
+        <span class="floating-heart-intro result-heart-c">♥</span>
+
+        <span class="diamond-shine result-shine-a"><span></span></span>
+        <span class="diamond-shine result-shine-b"><span></span></span>
+        <span class="diamond-shine result-shine-c"><span></span></span>
+      </div>
+
+      <div class="beauty-gift-layout">
+        <figure class="beauty-photo-frame">
+          <div class="beauty-frame-bow" aria-hidden="true"></div>
+          <img src="assets/beauty.jpg" alt="Beautiful birthday photo">
+        </figure>
+
+        <div class="beauty-message">
+          <h2>You are the most beautiful person I know.</h2>
+          <p class="section-text">
+            Always remember that your smile, your presence, and your love
+            make ordinary days feel special.
+          </p>
+
+          <div class="page-actions center-actions">
+            <button
+              type="button"
+              class="cute-button outline-button gift-back-button"
+              data-back="gift"
+            >
+              BACK
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Gift Result 2 -->
+<section class="page page-gift-result" data-page="gift-result-1">
+  <div class="page-inner centered-layout">
+    <div class="card gift-result-card gift-wish-card">
+
+      <div class="gift-wish-effects" id="giftWishEffects" aria-hidden="true">
+        <span class="floating-heart-intro wish-heart wish-heart-1">♥</span>
+        <span class="floating-heart-intro wish-heart wish-heart-2">♥</span>
+        <span class="floating-heart-intro wish-heart wish-heart-3">♥</span>
+        <span class="floating-heart-intro wish-heart wish-heart-4">♥</span>
+        <span class="floating-heart-intro wish-heart wish-heart-5">♥</span>
+        <span class="floating-heart-intro wish-heart wish-heart-6">♥</span>
+
+        <span class="diamond-shine wish-shine wish-shine-1"><span></span></span>
+        <span class="diamond-shine wish-shine wish-shine-2"><span></span></span>
+        <span class="diamond-shine wish-shine wish-shine-3"><span></span></span>
+        <span class="diamond-shine wish-shine wish-shine-4"><span></span></span>
+        <span class="diamond-shine wish-shine wish-shine-5"><span></span></span>
+        <span class="diamond-shine wish-shine wish-shine-6"><span></span></span>
+        <span class="diamond-shine wish-shine wish-shine-7"><span></span></span>
+        <span class="diamond-shine wish-shine wish-shine-8"><span></span></span>
+      </div>
+
+      <h2 class="typing-title gift-wish-title" id="giftWishMessage">Make a wish bebu</h2>
+
+      <div class="cake-scene gift-wish-cake-scene" id="giftWishCakeScene">
+        <div class="cake-stars" aria-hidden="true">
+          <span class="star star-1">&#9733;</span>
+          <span class="star star-2">&#9733;</span>
+          <span class="star star-3">&#9733;</span>
+          <span class="star star-4">&#9733;</span>
+          <span class="star star-5">&#9733;</span>
+          <span class="star star-6">&#9733;</span>
+        </div>
+
+        <div class="candle-row">
+          <div class="cake-candle candle-1">
+            <span class="wick"></span>
+            <span class="flame"></span>
+            <span class="smoke"></span>
+          </div>
+
+          <div class="cake-candle candle-2">
+            <span class="wick"></span>
+            <span class="flame"></span>
+            <span class="smoke"></span>
+          </div>
+
+          <div class="cake-candle candle-3">
+            <span class="wick"></span>
+            <span class="flame"></span>
+            <span class="smoke"></span>
+          </div>
+
+          <div class="cake-candle candle-4">
+            <span class="wick"></span>
+            <span class="flame"></span>
+            <span class="smoke"></span>
+          </div>
+
+          <div class="cake-candle candle-5">
+            <span class="wick"></span>
+            <span class="flame"></span>
+            <span class="smoke"></span>
+          </div>
+        </div>
+
+        <div class="cake-topper" aria-hidden="true">&hearts;</div>
+        <div class="cake-icing" aria-hidden="true"></div>
+        <div class="cake-layer cake-top-layer"></div>
+        <div class="cake-layer cake-middle-layer"></div>
+        <div class="cake-layer cake-bottom-layer"></div>
+        <div class="cake-plate"></div>
+      </div>
+
+      <div class="button-row">
+        <button type="button" class="cute-button danger-button" id="giftWishBlowButton">
+          BLOW
+        </button>
+
+      <button
+        type="button"
+        class="cute-button outline-button gift-back-button hidden"
+        id="giftWishBackButton"
+        data-back="gift"
+      >
+        BACK
+      </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Gift Result 3 -->
+    <section class="page page-gift-result" data-page="gift-result-2">
+      <div class="page-inner centered-layout">
+        <div class="card gift-result-card gift-result-yellow">
+          <p class="eyebrow">Gift Three</p>
+          <h2>There is one more surprise waiting.</h2>
+          <p class="section-text">
+            This gift is only a small part of the surprise. Make a wish and let the
+            next page reveal more.
+          </p>
+
+          <div class="page-actions center-actions">
+            
+            <button type="button" class="cute-button" data-next="cake">
+              CONTINUE
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Cake Page -->
+    <section class="page page-cake" data-page="cake">
+      <div class="page-inner centered-layout">
+
+        <div class="card cake-card">
+          <h2 class="typing-title" id="cakeMessage"></h2>
+
+          <div class="cake-scene" id="cakeScene">
+
+            <div class="cake-stars" aria-hidden="true">
+              <span class="star star-1">&#9733;</span>
+              <span class="star star-2">&#9733;</span>
+              <span class="star star-3">&#9733;</span>
+              <span class="star star-4">&#9733;</span>
+              <span class="star star-5">&#9733;</span>
+              <span class="star star-6">&#9733;</span>
+            </div>
+
+            <div class="candle-row">
+              <div class="cake-candle candle-1">
+                <span class="wick"></span>
+                <span class="flame"></span>
+                <span class="smoke"></span>
+              </div>
+
+              <div class="cake-candle candle-2">
+                <span class="wick"></span>
+                <span class="flame"></span>
+                <span class="smoke"></span>
+              </div>
+
+              <div class="cake-candle candle-3">
+                <span class="wick"></span>
+                <span class="flame"></span>
+                <span class="smoke"></span>
+              </div>
+
+              <div class="cake-candle candle-4">
+                <span class="wick"></span>
+                <span class="flame"></span>
+                <span class="smoke"></span>
+              </div>
+
+              <div class="cake-candle candle-5">
+                <span class="wick"></span>
+                <span class="flame"></span>
+                <span class="smoke"></span>
+              </div>
+
+              <div class="cake-candle candle-6">
+                <span class="wick"></span>
+                <span class="flame"></span>
+                <span class="smoke"></span>
+              </div>
+
+              <div class="cake-candle candle-7">
+                <span class="wick"></span>
+                <span class="flame"></span>
+                <span class="smoke"></span>
+              </div>
+            </div>
+
+            <div class="cake-topper" aria-hidden="true">&hearts;</div>
+            <div class="cake-icing" aria-hidden="true"></div>
+            <div class="cake-layer cake-top-layer"></div>
+            <div class="cake-layer cake-middle-layer"></div>
+            <div class="cake-layer cake-bottom-layer"></div>
+            <div class="cake-plate"></div>
+
+          </div>
+
+          <div class="button-row">
+            <button type="button" class="cute-button danger-button" id="blowButton">
+              BLOW
+            </button>
+
+            <button
+              type="button"
+              class="cute-button hidden"
+              id="cakeNextButton"
+              data-next="scrapbook"
+            >
+              NEXT
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Scrapbook Page -->
+    <section class="page page-scrapbook" data-page="scrapbook">
+      <div class="page-inner centered-layout">
+
+        <div class="card scrapbook-card">
+          <h2 class="typing-title scrapbook-title" id="scrapbookTitle"></h2>
+
+          <div class="scrapbook-board">
+            <div class="sticker sticker-heart">LOVE</div>
+            <div class="sticker sticker-star">&#9733;</div>
+            <div class="sticker sticker-round">xoxo</div>
+
+            <div class="tape tape-top-left"></div>
+            <div class="tape tape-top-right"></div>
+            <div class="tape tape-bottom-right"></div>
+
+            <div class="paper-scrap scrap-one">love love love</div>
+            <div class="paper-scrap scrap-two">love love love</div>
+            <div class="paper-scrap scrap-three">love love love</div>
+            <div class="paper-scrap scrap-four">love love love</div>
+
+            <figure class="scrapbook-photo main-photo">
+              <img
+                id="scrapbookMainPhoto"
+                src="assets/photo4.png"
+                alt="Birthday scrapbook placeholder photo"
+              >
+            </figure>
+          </div>
+
+          <div class="page-actions align-end">
+            <button type="button" class="cute-button" data-next="letter">NEXT</button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Final Letter Page -->
+<section class="page page-letter" data-page="letter">
+  <div class="page-inner centered-layout">
+
+    <div class="card letter-card">
+
+      <div class="letter-floating-effects" aria-hidden="true">
+        <span class="floating-heart-intro letter-heart letter-heart-1">♥</span>
+        <span class="floating-heart-intro letter-heart letter-heart-2">♥</span>
+        <span class="floating-heart-intro letter-heart letter-heart-3">♥</span>
+        <span class="floating-heart-intro letter-heart letter-heart-4">♥</span>
+        <span class="floating-heart-intro letter-heart letter-heart-5">♥</span>
+        <span class="floating-heart-intro letter-heart letter-heart-6">♥</span>
+        <span class="floating-heart-intro letter-heart letter-heart-7">♥</span>
+        <span class="floating-heart-intro letter-heart letter-heart-8">♥</span>
+
+        <span class="diamond-shine letter-shine letter-shine-1"><span></span></span>
+        <span class="diamond-shine letter-shine letter-shine-2"><span></span></span>
+        <span class="diamond-shine letter-shine letter-shine-3"><span></span></span>
+        <span class="diamond-shine letter-shine letter-shine-4"><span></span></span>
+        <span class="diamond-shine letter-shine letter-shine-5"><span></span></span>
+        <span class="diamond-shine letter-shine letter-shine-6"><span></span></span>
+        <span class="diamond-shine letter-shine letter-shine-7"><span></span></span>
+        <span class="diamond-shine letter-shine letter-shine-8"><span></span></span>
+      </div>
+
+      <div class="photo-strip">
+        <div class="strip-photo">
+          <img id="letterPhoto1" src="assets/photo1.png" alt="Birthday photo strip one">
+        </div>
+
+        <div class="strip-photo">
+          <img id="letterPhoto2" src="assets/photo2.jpeg" alt="Birthday photo strip two">
+        </div>
+
+        <div class="strip-photo">
+          <img id="letterPhoto3" src="assets/photo3.jpg" alt="Birthday photo strip three">
+        </div>
+      </div>
+
+      <div class="envelope-area">
+        <div class="small-stamp">mailed with love</div>
+        <div class="love-sticker">2GETHER 4EVER</div>
+        <div class="heart-cluster">&hearts; &hearts; &hearts;</div>
+
+        <button
+          type="button"
+          class="envelope letter-envelope-button"
+          id="openLetterButton"
+          aria-label="Open birthday letter"
+        >
+          <span class="open-letter-text">Click to open</span>
+        </button>
+
+        <div class="letter-paper" id="letterPaper">
+          <p class="letter-greeting" id="letterGreeting"></p>
+          <p class="letter-message" id="finalMessageText"></p>
+        </div>
+
+        <div class="page-actions center-actions letter-actions">
+          <button
+            type="button"
+            class="cute-button outline-button gift-back-button"
+            data-back="gift"
+          >
+            BACK
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
